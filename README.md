@@ -37,11 +37,11 @@ Deploy realizado no Google Cloud Run (free tier) e endereço ativo para ser aces
 
 Rest Client ```get.http``` necessita de uma API KEY válida para https://www.weatherapi.com/
 
----
-<br>
-
 API_KEY da Weather API deverá ser informada no header api_key.
 
 ```
 curl --location 'localhost:8080?zip=<ZIP>' --header 'api_key: <API_KEY>'
+```
+```
+curl --location 'https://fullcycle-cloud-run-dyk2mdetxq-uc.a.run.app/?zip=<ZIP>' --header 'api_key: <API_KEY>'
 ```
