@@ -1,0 +1,36 @@
+### LOCAL ###
+### OK
+GET http://localhost:8080?zip=04689110 HTTP/1.1
+Content-Type: application/json
+api_key: <VALID WEATHERAPI KEY>
+
+### CAN NOT FIND ZIPCODE
+GET http://localhost:8080?zip=00000000 HTTP/1.1
+Content-Type: application/json
+api_key: <VALID WEATHERAPI KEY>
+
+### INVALID ZIPCODE
+GET http://localhost:8080?zip=ABC0000 HTTP/1.1
+Content-Type: application/json
+api_key: <VALID WEATHERAPI KEY>
+
+### CLOUD RUN ###
+### OK
+GET http://localhost:8080?zip=04689110 HTTP/1.1
+Content-Type: application/json
+api_key: <VALID WEATHERAPI KEY>
+
+### CAN NOT FIND ZIPCODE
+GET https://fullcycle-cloud-run-dyk2mdetxq-uc.a.run.app/?zip=00000000 HTTP/1.1
+Content-Type: application/json
+api_key: <VALID WEATHERAPI KEY>
+
+### INVALID ZIPCODE
+GET https://fullcycle-cloud-run-dyk2mdetxq-uc.a.run.app/?zip=ABC0000 HTTP/1.1
+Content-Type: application/json
+api_key: <VALID WEATHERAPI KEY>
+
+###
+GET https://fullcycle-cloud-run-dyk2mdetxq-uc.a.run.app/?zip=ABC0000 HTTP/1.1
+Content-Type: application/json
+api_key: <VALID WEATHERAPI KEY>
